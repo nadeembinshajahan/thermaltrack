@@ -1,4 +1,4 @@
-# Real-time multi-object tracking and segmentation using Yolov5 with StrongSORT and OSNet
+# Real-Time Multi-Object Tracking using YOLOv5 with StrongSORT
 
 ## Use without Docker
 Clone the repo, change directory and install pip requirements
