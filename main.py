@@ -277,8 +277,6 @@ def run(
                                 "track_id": int(id),
                                 "confidence": float(conf)
                             }
-                            print(aggregate_bbox)
-                            print(id)
                             predictions.append(prediction_dict)
                             prediction_id += 1
                             
