@@ -43,7 +43,7 @@ from trackers.multi_tracker_zoo import create_tracker
 objects_tracked = []
 images = []
 predictions = []
-def write_output_json(objects_tracked, images, predictions, filename = 'result.json'):
+def write_output_json(objects_tracked, images, predictions, filename = 'output/result.json'):
     final_output_dict = {
     "info": {
         "contributor": "",

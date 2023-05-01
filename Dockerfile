@@ -5,6 +5,11 @@ RUN apt update
 RUN mkdir -p /app
 WORKDIR /app
 RUN git clone --recurse-submodules https://github.com/nadeembinshajahan/thermaltrack.git /app
+RUN pip install conda
+
+#COPY tii_final.yml .
+#RUN conda env create -f tii_final.yml
+#RUN conda activate tii_final
 # Install pip packages
 COPY requirements.txt .
 RUN python -m pip install --upgrade pip setuptools wheel
@@ -14,10 +19,8 @@ RUN pip install --no-cache -r requirements.txt
 
 
 COPY tii_final.yml .
-RUN conda env create -f tii_final.yml
-RUN conda activate tii_final
 
 COPY main.py .
-CMD ["python3", "main.py", "--yolo-weights", "weights/best.pt", "--img", "640", "--source", "/mounted_folder", "--save-txt" ]
+CMD ["python3", "main.py", "--yolo-weights", "weights/best.pt", "--img", "640", "--source", "/mounted_folder", "--save-txt"]
 
 VOLUME ["/mounted_folder"]
