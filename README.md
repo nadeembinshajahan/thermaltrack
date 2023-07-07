@@ -1,4 +1,4 @@
-# Real-Time Multi-Object Tracking using YOLOv5 with StrongSORT
+# Real-Time Multi-Object Tracking using YOLOv5 with StrongSORT for Thermal Imagery
 
 ## Use without Docker
 Clone the repo, change directory and install pip requirements
